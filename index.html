@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techlenia - Your Profesional Web Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body class="text-gray-800 bg-white">
+
+  <!-- Header / Navigation -->
+  <header class="bg-white/90 backdrop-blur-lg shadow-md fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-5">
+      <h1 class="text-3xl font-extrabold gradient-text">Techlenia</h1>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#home" class="hover:text-blue-600 transition-colors font-medium">Beranda</a>
+        <a href="#services" class="hover:text-blue-600 transition-colors font-medium">Layanan</a>
+        <a href="#portfolio" class="hover:text-blue-600 transition-colors font-medium">Portofolio</a>
+        <a href="#pricing" class="hover:text-blue-600 transition-colors font-medium">Harga</a>
+        <a href="#contact" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all">Kontak</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-blue-600 focus:outline-none text-2xl">☰</button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-3 p-6 bg-white/95 backdrop-blur-lg shadow-lg">
+      <a href="#home" class="hover:text-blue-600 transition-colors font-medium py-2">Beranda</a>
+      <a href="#services" class="hover:text-blue-600 transition-colors font-medium py-2">Layanan</a>
+      <a href="#portfolio" class="hover:text-blue-600 transition-colors font-medium py-2">Portofolio</a>
+      <a href="#pricing" class="hover:text-blue-600 transition-colors font-medium py-2">Harga</a>
+      <a href="#contact" class="hover:text-blue-600 transition-colors font-medium py-2">Kontak</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 pb-20 bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="slide-in">
+          <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+            Wujudkan <span class="text-yellow-300">Ide Digital</span> Anda Menjadi Kenyataan
+          </h2>
+          <p class="text-xl mb-8 text-blue-100">
+            Pengembangan web profesional, aplikasi mobile, dan solusi perangkat lunak khusus yang disesuaikan dengan kebutuhan bisnis Anda.
+          </p>
+          <div class="flex gap-4 flex-wrap">
+            <a href="#contact" class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-yellow-300 hover:text-blue-800 transition-all transform hover:scale-105 shadow-2xl">
+              Mulai Sekarang →
+            </a>
+            <a href="#portfolio" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-600 transition-all transform hover:scale-105">
+              Lihat Karya
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:block float">
+          <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl">
+            <div class="space-y-4">
+              <div class="bg-white/20 rounded-lg p-4 flex items-center space-x-4">
+                <div class="text-4xl">🌐</div>
+                <div>
+                  <h3 class="font-bold text-lg">Pengembangan Website</h3>
+                  <p class="text-sm text-blue-100">Responsif & Modern</p>
+                </div>
+              </div>
+              <div class="bg-white/20 rounded-lg p-4 flex items-center space-x-4">
+                <div class="text-4xl">📱</div>
+                <div>
+                  <h3 class="font-bold text-lg">Aplikasi Mobile</h3>
+                  <p class="text-sm text-blue-100">iOS & Android</p>
+                </div>
+              </div>
+              <div class="bg-white/20 rounded-lg p-4 flex items-center space-x-4">
+                <div class="text-4xl">⚡</div>
+                <div>
+                  <h3 class="font-bold text-lg">Software Khusus</h3>
+                  <p class="text-sm text-blue-100">Solusi Disesuaikan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 float" style="animation-delay: 1s;"></div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h3 class="text-5xl font-extrabold mb-4 gradient-text">Layanan Kami</h3>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">Solusi digital menyeluruh untuk mengembangkan bisnis Anda</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+          <div class="text-6xl mb-6 transform group-hover:scale-110 transition-transform">🌐</div>
+          <h4 class="font-bold text-2xl mb-4">Pengembangan Website</h4>
+          <p class="text-gray-600 mb-6">Landing page, website korporat, e-commerce, dan aplikasi web khusus dengan framework modern.</p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Desain Responsif</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Dioptimalkan SEO</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Loading Cepat</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Integrasi CMS</li>
+          </ul>
+        </div>
+
+        <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+          <div class="text-6xl mb-6 transform group-hover:scale-110 transition-transform">📱</div>
+          <h4 class="font-bold text-2xl mb-4">Pengembangan Aplikasi Mobile</h4>
+          <p class="text-gray-600 mb-6">Aplikasi mobile native dan cross-platform untuk iOS dan Android dengan pengalaman pengguna yang mulus.</p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> iOS & Android</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> React Native</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Flutter</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Deploy ke App Store</li>
+          </ul>
+        </div>
+
+        <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+          <div class="text-6xl mb-6 transform group-hover:scale-110 transition-transform">⚙️</div>
+          <h4 class="font-bold text-2xl mb-4">Software Khusus</h4>
+          <p class="text-gray-600 mb-6">Solusi perangkat lunak disesuaikan, sistem otomasi, dan aplikasi enterprise untuk bisnis Anda.</p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Sistem ERP</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Solusi CRM</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Pengembangan API</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Integrasi Cloud</li>
+          </ul>
+        </div>
+
+        <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+          <div class="text-6xl mb-6 transform group-hover:scale-110 transition-transform">🛒</div>
+          <h4 class="font-bold text-2xl mb-4">Solusi E-Commerce</h4>
+          <p class="text-gray-600 mb-6">Pengaturan toko online lengkap dengan payment gateway, manajemen inventori, dan integrasi pengiriman.</p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Payment Gateway</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Sistem Inventori</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Multi-vendor</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Dashboard Analitik</li>
+          </ul>
+        </div>
+
+        <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+          <div class="text-6xl mb-6 transform group-hover:scale-110 transition-transform">🎨</div>
+          <h4 class="font-bold text-2xl mb-4">Desain UI/UX</h4>
+          <p class="text-gray-600 mb-6">Desain antarmuka yang indah dan intuitif dengan fokus pada pengalaman pengguna dan konversi.</p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Wireframing</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Prototyping</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Design Systems</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> User Testing</li>
+          </ul>
+        </div>
+
+        <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+          <div class="text-6xl mb-6 transform group-hover:scale-110 transition-transform">🔧</div>
+          <h4 class="font-bold text-2xl mb-4">Maintenance & Dukungan</h4>
+          <p class="text-gray-600 mb-6">Pemeliharaan berkelanjutan, update, perbaikan bug, dan dukungan teknis untuk menjaga aplikasi Anda tetap berjalan lancar.</p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Dukungan 24/7</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Update Rutin</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Perbaikan Bug</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Monitoring Performa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-24 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h3 class="text-5xl font-extrabold mb-4 gradient-text">Portofolio Kami</h3>
+        <p class="text-gray-600 text-lg">Proyek terbaru yang kami</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+            <div class="h-48 flex items-center justify-center bg-gray-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6igFGERqSax6xXPHT-8Lr3iBdw5Fg4xTGxQ&s" alt="portofolio" class="h-full w-full object-cover rounded-lg">
+</div>
+          <div class="p-6">
+            <h4 class="font-bold text-xl mb-2">Customized Portfolio Website</h4>
+            <p class="text-gray-600 mb-4">Menyediakan template portfolio untuk mendukung karir Anda</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+            <div class="h-48 flex items-center justify-center bg-gray-100">
+                <img src="https://static.wixstatic.com/media/fffca0_47b26480b4234d72a24213aeeb922dd6~mv2_d_3000_1688_s_2.png/v1/fill/w_640,h_1296,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/fffca0_47b26480b4234d72a24213aeeb922dd6~mv2_d_3000_1688_s_2.png" alt="unibike" class="h-full w-full object-cover rounded-lg">
+</div>
+          <div class="p-6">
+            <h4 class="font-bold text-xl mb-2">Aplikasi Mobile UniBike</h4>
+            <p class="text-gray-600 mb-4">Aplikasi pelacak peminjaman sepeda sebagai alat mobilisasi universitas pada iOS & Android</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React Native</span>
+              <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+<div class="h-48 flex items-center justify-center bg-gray-100">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvwoMHdJC_hbv5CRdCUU_u2tkAgr1w3fQeRg&s" alt="scms" class="h-full w-full object-cover rounded-lg">
+</div>
+          <div class="p-6">
+            <h4 class="font-bold text-xl mb-2">Smart Customer Management System (SCMS)</h4>
+            <p class="text-gray-600 mb-4">Pengembangan Smart Customer Management System Berbasis Machine Learning pada Layanan Telekomunikasi</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">React</span>
+              <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h3 class="text-5xl font-extrabold mb-4 gradient-text">Paket Harga</h3>
+        <p class="text-gray-600 text-lg">Pilih paket yang sempurna untuk proyek Anda</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-2xl transition-shadow">
+          <h4 class="font-bold text-2xl mb-2">Dasar</h4>
+          <p class="text-gray-600 mb-6">Sempurna untuk proyek kecil</p>
+          <div class="mb-6">
+            <span class="text-5xl font-extrabold text-blue-600">Rp1,5jt</span>
+            <span class="text-gray-600">/proyek</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Landing Page</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Desain Responsif</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Form Kontak</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Dukungan 1 Bulan</li>
+            <li class="flex items-center text-gray-400"><span class="mr-2">✗</span> Fitur Khusus</li>
+          </ul>
+          <button class="w-full bg-gray-200 text-gray-800 py-3 rounded-full font-bold hover:bg-gray-300 transition">Pilih Paket</button>
+        </div>
+
+        <div class="bg-gradient-to-br from-blue-600 to-indigo-700 text-white rounded-2xl p-8 shadow-2xl transform scale-105">
+          <div class="bg-yellow-400 text-blue-900 px-4 py-1 rounded-full inline-block font-bold mb-4">POPULER</div>
+          <h4 class="font-bold text-2xl mb-2">Profesional</h4>
+          <p class="text-blue-100 mb-6">Terbaik untuk bisnis berkembang</p>
+          <div class="mb-6">
+            <span class="text-5xl font-extrabold">Rp3,5jt</span>
+            <span class="text-blue-100">/proyek</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center"><span class="text-yellow-300 mr-2">✓</span> Website Lengkap (5-10 halaman)</li>
+            <li class="flex items-center"><span class="text-yellow-300 mr-2">✓</span> Desain Custom</li>
+            <li class="flex items-center"><span class="text-yellow-300 mr-2">✓</span> Integrasi CMS</li>
+            <li class="flex items-center"><span class="text-yellow-300 mr-2">✓</span> Optimasi SEO</li>
+            <li class="flex items-center"><span class="text-yellow-300 mr-2">✓</span> Dukungan 3 Bulan</li>
+          </ul>
+          <button class="w-full bg-white text-blue-600 py-3 rounded-full font-bold hover:bg-yellow-300 transition">Pilih Paket</button>
+        </div>
+
+        <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-2xl transition-shadow">
+          <h4 class="font-bold text-2xl mb-2">Enterprise</h4>
+          <p class="text-gray-600 mb-6">Untuk proyek skala besar</p>
+          <div class="mb-6">
+            <span class="text-5xl font-extrabold text-blue-600">Custom</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Web/Aplikasi Custom</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Fitur Advanced</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Integrasi API</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Desain Database</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Dukungan Unlimited</li>
+          </ul>
+          <button class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 rounded-full font-bold hover:from-blue-700 hover:to-indigo-700 transition">Hubungi Kami</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h3 class="text-5xl font-extrabold mb-4 gradient-text">Mengapa Memilih Kami?</h3>
+        <p class="text-gray-600 text-lg">Yang membuat kami berbeda</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-6xl mb-4">⚡</div>
+          <h4 class="font-bold text-xl mb-2">Pengerjaan Cepat</h4>
+          <p class="text-gray-600">Waktu penyelesaian cepat dengan jaminan kualitas terdepan</p>
+        </div>
+        <div class="text-center">
+          <div class="text-6xl mb-4">💎</div>
+          <h4 class="font-bold text-xl mb-2">Kualitas Premium</h4>
+          <p class="text-gray-600">Kode bersih dan desain indah setiap saat</p>
+        </div>
+        <div class="text-center">
+          <div class="text-6xl mb-4">🤝</div>
+          <h4 class="font-bold text-xl mb-2">Fokus pada Klien</h4>
+          <p class="text-gray-600">Kepuasan Anda adalah prioritas utama kami</p>
+        </div>
+        <div class="text-center">
+          <div class="text-6xl mb-4">🔒</div>
+          <h4 class="font-bold text-xl mb-2">Aman & Terpercaya</h4>
+          <p class="text-gray-600">Standar keamanan tingkat enterprise</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h3 class="text-5xl font-extrabold mb-4 gradient-text">Mari Mulai Proyek Anda</h3>
+        <p class="text-gray-600 text-lg">Dapatkan konsultasi gratis hari ini</p>
+      </div>
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+        <div class="space-y-8">
+          <div class="flex items-start space-x-4">
+            <div class="text-4xl">📧</div>
+            <div>
+              <h4 class="font-bold text-xl mb-2">Email Us</h4>
+              <p class="text-gray-600">helpdesk@techlenia.com<br/>support@devcraft.com</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <div class="text-4xl">📞</div>
+            <div>
+              <h4 class="font-bold text-xl mb-2">Call Us</h4>
+              <p class="text-gray-600">+62 858-0966-1890<br/>Senin-Jumat: 09.00 - 18.00 WIB</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <div class="text-4xl">💬</div>
+            <div>
+              <h4 class="font-bold text-xl mb-2">Live Chat</h4>
+              <p class="text-gray-600">Available on WhatsApp<br/>Fast Respon Guarantee</p>
+            </div>
+          </div>
+        </div>
+        
+<form id="contact-form" class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl shadow-xl">
+  <div class="mb-6">
+    <label for="name" class="block font-bold mb-2 text-gray-700">Nama</label>
+    <input type="text" id="name" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-600 transition" placeholder="Nama Anda" required />
+  </div>
+  <div class="mb-6">
+    <label for="email" class="block font-bold mb-2 text-gray-700">Email</label>
+    <input type="email" id="email" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-600 transition" placeholder="email@anda.com" required />
+  </div>
+  <div class="mb-6">
+    <label for="service" class="block font-bold mb-2 text-gray-700">Layanan</label>
+    <select id="service" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-600 transition" required>
+      <option value="">Pilih layanan</option>
+      <option value="website">Pengembangan Website</option>
+      <option value="mobile">Aplikasi Mobile</option>
+      <option value="custom">Software Khusus</option>
+    </select>
+  </div>
+
+  <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-3 rounded-full hover:from-blue-700 hover:to-indigo-700 transition">
+    Kirim Pesan
+  </button>
+</form>
+</div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="container mx-auto px-6 text-center">
+      <h4 class="text-xl font-bold mb-4 text-white">Techlenia</h4>
+      <p class="mb-4 text-gray-400">Solusi Digital Profesional untuk Bisnis Modern</p>
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="#" class="hover:text-white text-2xl">🌐</a>
+        <a href="https://eugeniagmaia129@gmail.com" target="_blank" rel="noopener noreferrer" class="hover:text-white text-2xl">📧</a>
+        <a href="https://wa.me/85809661890" target="_blank" rel="noopener noreferrer" class="hover:text-white text-2xl">💬</a>
+      </div>
+      <p class="text-gray-500 text-sm">© 2025 Techlenia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const slideIn = document.querySelector(".slide-in");
+      slideIn.style.animation = "slideIn 1.2s ease-out";
+    });
+
+    document.querySelectorAll('.float').forEach((el, index) => {
+      el.style.animation = `float 6s ease-in-out infinite`;
+      el.style.animationDelay = `${index * 1}s`;
+    });
+
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Pesan Anda telah dikirim! Kami akan segera menghubungi Anda.');
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
